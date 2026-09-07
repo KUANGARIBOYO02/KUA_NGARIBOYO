@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KUA Kecamatan Ngariboyo</title>
+<meta name="description" content="Website layanan KUA Kecamatan Ngariboyo">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/logo-kemenag.jpg" alt="Logo Kementerian Agama">
+    <div><strong>KUA KECAMATAN<br>NGARIBOYO</strong><small>Melayani dengan Profesional, Transparan, dan Berintegritas</small></div>
+  </div>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <nav id="nav">
+    <a href="#beranda">Beranda</a>
+    <a href="#daftar">Pendaftaran Nikah</a>
+    <a href="#kalender">Kalender Nikah</a>
+    <a href="#layanan">Layanan</a>
+    <a href="#informasi">Informasi</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+
+<main>
+<section id="beranda" class="hero">
+  <div class="hero-overlay">
+    <div class="hero-copy">
+      <p class="eyebrow">SELAMAT DATANG DI</p>
+      <h1>WEBSITE RESMI<br>KUA KECAMATAN<br>NGARIBOYO</h1>
+      <p>Pusat Informasi dan Layanan Kantor Urusan Agama Kecamatan Ngariboyo.</p>
+      <div class="actions">
+        <a class="btn primary" href="#daftar">💍 DAFTAR NIKAH ONLINE</a>
+        <a class="btn secondary" href="#kalender">📅 CEK KALENDER NIKAH</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Layanan Kami</h2>
+  <div class="cards four">
+    <a class="card" href="#daftar"><span>💍</span><h3>Pendaftaran Nikah</h3><p>Daftar dan lengkapi kebutuhan administrasi pernikahan secara online.</p><b>Selengkapnya →</b></a>
+    <a class="card" href="#kalender"><span>📅</span><h3>Kalender Nikah</h3><p>Lihat jadwal pernikahan yang telah terdaftar pada KUA Kecamatan Ngariboyo.</p><b>Selengkapnya →</b></a>
+    <a class="card" href="#persyaratan"><span>📄</span><h3>Persyaratan</h3><p>Informasi dokumen dan persyaratan untuk setiap layanan di KUA.</p><b>Selengkapnya →</b></a>
+    <a class="card" href="#kontak"><span>☎</span><h3>Hubungi Kami</h3><p>Alamat, nomor telepon, email, dan jam pelayanan KUA.</p><b>Selengkapnya →</b></a>
+  </div>
+</section>
+
+<section id="daftar" class="section alt">
+  <div class="section-head"><h2>Pendaftaran Nikah</h2><p>Formulir di bawah adalah contoh tampilan. Untuk operasional, ganti tombol dengan URL Google Form resmi KUA.</p></div>
+  <div class="form-layout">
+    <div class="panel">
+      <h3>Formulir Pendaftaran Nikah</h3>
+      <form onsubmit="demoSubmit(event)">
+        <label>Email <input type="email" required placeholder="nama@email.com"></label>
+        <div class="grid2">
+          <label>Nama Calon Suami <input required></label>
+          <label>NIK Calon Suami <input inputmode="numeric" maxlength="16" required></label>
+          <label>Nama Calon Istri <input required></label>
+          <label>NIK Calon Istri <input inputmode="numeric" maxlength="16" required></label>
+        </div>
+        <div class="grid2">
+          <label>Tanggal Rencana Akad <input type="date" required></label>
+          <label>Jam Akad <input type="time" required></label>
+        </div>
+        <label>Tempat Akad <input required placeholder="Masjid / rumah / kantor KUA"></label>
+        <label>Nomor WhatsApp <input type="tel" required></label>
+        <label>Catatan <textarea rows="4" placeholder="Keterangan tambahan"></textarea></label>
+        <button class="btn primary" type="submit">Kirim Pendaftaran</button>
+      </form>
+      <p class="notice">⚠️ Versi demo tidak mengirim data ke server. Untuk penggunaan resmi, hubungkan halaman ini ke Google Forms atau sistem internal KUA.</p>
+    </div>
+    <aside class="panel">
+      <h3>Dokumen yang Perlu Disiapkan</h3>
+      <ul class="check">
+        <li>KTP calon pengantin</li><li>Kartu Keluarga</li><li>Dokumen administrasi sesuai ketentuan</li><li>Pas foto sesuai ketentuan</li><li>Dokumen tambahan bila diperlukan</li>
+      </ul>
+      <h3>Alur Pendaftaran</h3>
+      <ol class="steps"><li>Isi formulir</li><li>Verifikasi petugas</li><li>Lengkapi persyaratan</li><li>Penjadwalan</li><li>Pelayanan/pencatatan</li></ol>
+    </aside>
+  </div>
+</section>
+
+<section id="kalender" class="section">
+  <div class="section-head"><h2>Kalender Nikah</h2><p>Contoh kalender jadwal. Untuk Google Sites, sematkan Google Calendar resmi KUA pada bagian ini.</p></div>
+  <div class="calendar panel">
+    <div class="cal-head"><button onclick="changeMonth(-1)">‹</button><h3 id="monthTitle"></h3><button onclick="changeMonth(1)">›</button></div>
+    <div class="weekdays"><b>Min</b><b>Sen</b><b>Sel</b><b>Rab</b><b>Kam</b><b>Jum</b><b>Sab</b></div>
+    <div id="days" class="days"></div>
+  </div>
+</section>
+
+<section id="persyaratan" class="section alt">
+<h2>Persyaratan & Alur Layanan</h2>
+<div class="cards three">
+ <div class="card"><span>📋</span><h3>Persyaratan Nikah</h3><p>Daftar dokumen dan ketentuan administrasi yang perlu dipenuhi calon pengantin.</p></div>
+ <div class="card"><span>🔎</span><h3>Verifikasi</h3><p>Petugas memeriksa kelengkapan data dan dokumen sebelum proses dilanjutkan.</p></div>
+ <div class="card"><span>📅</span><h3>Penjadwalan</h3><p>Jadwal pelayanan disepakati setelah data dan persyaratan dinyatakan lengkap.</p></div>
+</div>
+</section>
+
+<section id="layanan" class="section">
+<h2>Layanan KUA</h2>
+<div class="cards six">
+ <div class="service"><span>💍</span><h3>Pernikahan</h3><p>Informasi pendaftaran dan pencatatan pernikahan.</p></div>
+ <div class="service"><span>📝</span><h3>Rekomendasi Nikah</h3><p>Layanan rekomendasi nikah untuk calon pengantin.</p></div>
+ <div class="service"><span>📖</span><h3>Buku Nikah</h3><p>Informasi penerbitan, duplikat, dan legalisasi buku nikah.</p></div>
+ <div class="service"><span>🕌</span><h3>Wakaf</h3><p>Informasi dan konsultasi layanan wakaf.</p></div>
+ <div class="service"><span>💰</span><h3>Zakat</h3><p>Informasi layanan dan edukasi zakat.</p></div>
+ <div class="service"><span>💬</span><h3>Konsultasi Keagamaan</h3><p>Layanan konsultasi dan bimbingan keagamaan.</p></div>
+</div>
+</section>
+
+<section id="informasi" class="section alt">
+<h2>Informasi & Berita</h2>
+<div class="news">
+ <article><span class="tag">PENGUMUMAN</span><h3>Informasi Pelayanan KUA</h3><p>Gunakan halaman ini untuk pengumuman jadwal, perubahan layanan, dan informasi penting.</p></article>
+ <article><span class="tag">EDUKASI</span><h3>Persiapan Pernikahan</h3><p>Materi edukasi dan bimbingan perkawinan dapat ditampilkan di sini.</p></article>
+ <article><span class="tag">BERITA</span><h3>Kegiatan KUA Ngariboyo</h3><p>Dokumentasikan kegiatan pelayanan dan program KUA secara berkala.</p></article>
+</div>
+</section>
+
+<section id="galeri" class="section">
+<h2>Galeri</h2>
+<div class="gallery"><div>Foto Kegiatan 1</div><div>Foto Kegiatan 2</div><div>Foto Kegiatan 3</div><div>Foto Kegiatan 4</div></div>
+<p class="muted">Ganti kotak di atas dengan foto kegiatan/gedung KUA pada Google Sites.</p>
+</section>
+</main>
+
+<footer id="kontak">
+<div class="footer-grid">
+ <div><img src="assets/logo-kemenag.jpg" alt="Logo"><h3>KUA KECAMATAN NGARIBOYO</h3><p>Jl. Raya Ngariboyo<br>Kec. Ngariboyo, Kab. Magetan, Jawa Timur</p></div>
+ <div><h3>Kontak</h3><p>☎ (Isi nomor resmi KUA)<br>✉ (Isi email resmi KUA)</p></div>
+ <div><h3>Jam Pelayanan</h3><p>Senin–Kamis: 08.00–15.30<br>Jumat: 08.00–16.00<br><em>Sesuaikan dengan jam resmi.</em></p></div>
+</div>
+<div class="copyright">© <span id="year"></span> KUA Kecamatan Ngariboyo. Semua hak dilindungi.</div>
+</footer>
+<script src="script.js"></script>
+</body></html>
