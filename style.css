@@ -39,7 +39,17 @@
   text-align: center;
   margin-bottom: 25px;
 }
+/* TOMBOL BERANDA TERSUSUN KE BAWAH */
+.actions {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+}
 
+.actions .btn {
+  width: fit-content !important;
+}
 #galeri .gallery {
   width: 100%;
   max-width: 800px;
