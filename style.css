@@ -29,3 +29,46 @@
   object-fit: cover !important;
   border-radius: 12px;
 }
+/* GALERI TENGAH DAN LANDSCAPE */
+
+#galeri {
+  text-align: center;
+}
+
+#galeri .gallery-header h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#galeri .gallery {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+#galeri .gallery a {
+  display: block;
+}
+
+#galeri .gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+#galeri .gallery-caption {
+  text-align: center;
+  margin-top: 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  #galeri .gallery {
+    max-width: 95%;
+  }
+}
