@@ -11,3 +11,21 @@
   object-fit: cover;
   border-radius: 16px;
 }
+/* Ukuran galeri */
+.gallery {
+  display: block !important;
+  max-width: 600px !important;
+  margin: 25px auto !important;
+}
+
+.gallery a {
+  display: block !important;
+}
+
+.gallery img {
+  display: block !important;
+  width: 100% !important;
+  height: 300px !important;
+  object-fit: cover !important;
+  border-radius: 12px;
+}
