@@ -57,24 +57,26 @@
   <div class="form-layout">
     <div class="panel">
       <h3>Formulir Pendaftaran Nikah</h3>
-      <form onsubmit="demoSubmit(event)">
-        <label>Email <input type="email" required placeholder="nama@email.com"></label>
-        <div class="grid2">
-          <label>Nama Calon Suami <input required></label>
-          <label>NIK Calon Suami <input inputmode="numeric" maxlength="16" required></label>
-          <label>Nama Calon Istri <input required></label>
-          <label>NIK Calon Istri <input inputmode="numeric" maxlength="16" required></label>
-        </div>
-        <div class="grid2">
-          <label>Tanggal Rencana Akad <input type="date" required></label>
-          <label>Jam Akad <input type="time" required></label>
-        </div>
-        <label>Tempat Akad <input required placeholder="Masjid / rumah / kantor KUA"></label>
-        <label>Nomor WhatsApp <input type="tel" required></label>
-        <label>Catatan <textarea rows="4" placeholder="Keterangan tambahan"></textarea></label>
-        <button class="btn primary" type="submit">Kirim Pendaftaran</button>
-      </form>
-      <p class="notice">⚠️ Versi demo tidak mengirim data ke server. Untuk penggunaan resmi, hubungkan halaman ini ke Google Forms atau sistem internal KUA.</p>
+      <div style="text-align:center; padding:20px 0;">
+  <p>
+    Untuk melakukan pendaftaran nikah, silakan gunakan
+    formulir resmi KUA Kecamatan Ngariboyo.
+  </p>
+
+  <a
+    class="btn primary"
+    href="https://docs.google.com/forms/d/e/1FAIpQLScUJaQ_88kHzNyiUYyDM4uP7dMIu5CpChN3W9SoHJ3iEEHMgg/viewform?usp=dialog"
+    target="_blank"
+    rel="noopener noreferrer">
+    💍 DAFTAR NIKAH ONLINE
+  </a>
+
+  <p style="margin-top:15px; font-size:14px;">
+    Formulir akan terbuka di halaman baru.
+    Silakan isi data dengan benar dan lengkap.
+  </p>
+</div>
+      
     </div>
     <aside class="panel">
       <h3>Dokumen yang Perlu Disiapkan</h3>
