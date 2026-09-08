@@ -37,7 +37,9 @@ function galleryPrev() {
   showGalleryPhoto(galleryIndex - 1);
 }
 
-// Ganti foto otomatis setiap 4 detik
-setInterval(() => {
-  galleryNext();
-}, 4000);
+// SLIDESHOW OTOMATIS SETIAP 4 DETIK
+window.addEventListener("load", function () {
+  setInterval(function () {
+    galleryNext();
+  }, 4000);
+});
