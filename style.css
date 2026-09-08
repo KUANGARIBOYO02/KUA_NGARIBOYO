@@ -155,3 +155,12 @@
     max-width: 95%;
   }
 }
+/* Warna link kontak di footer */
+.footer-grid a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-grid a:hover {
+  text-decoration: underline;
+}
