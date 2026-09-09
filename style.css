@@ -277,3 +277,146 @@
     gap: 25px;
   }
 }
+
+/* ==========================================
+   PERBAIKAN TOTAL TAMPILAN HP
+   ========================================== */
+
+@media (max-width: 700px) {
+
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* HEADER */
+  .topbar {
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+  }
+
+  /* NAVIGASI */
+  #nav {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* HERO MENJADI SATU KOLOM */
+  .hero {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+  }
+
+  .hero > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* TEKS BERANDA */
+  .hero-content {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 30px 20px !important;
+  }
+
+  .hero-content h1 {
+    font-size: 30px !important;
+    line-height: 1.1 !important;
+  }
+
+  /* FOTO GEDUNG */
+  .hero img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 350px !important;
+    object-fit: cover !important;
+  }
+
+  /* SEMUA SECTION */
+  main {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+  }
+
+  .section {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 40px 15px !important;
+    margin: 0 !important;
+  }
+
+  /* JUDUL */
+  .section h2 {
+    text-align: center !important;
+  }
+
+  /* LAYANAN KAMI */
+  .cards,
+  .cards.four,
+  .cards.three,
+  .cards.six {
+    width: 100% !important;
+    max-width: none !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    box-sizing: border-box !important;
+  }
+
+  .card,
+  .service {
+    min-width: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* PENDAFTARAN NIKAH */
+  .panel-grid,
+  .two,
+  .three {
+    width: 100% !important;
+    max-width: none !important;
+    grid-template-columns: 1fr !important;
+    box-sizing: border-box !important;
+  }
+
+  /* KALENDER */
+  #kalender iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* GALERI */
+  .gallery-slider {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* FOOTER */
+  footer {
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .footer-grid {
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+    box-sizing: border-box !important;
+  }
+}
