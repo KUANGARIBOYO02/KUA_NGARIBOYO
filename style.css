@@ -164,3 +164,116 @@
 .footer-grid a:hover {
   text-decoration: underline;
 }
+/* =========================
+   TAMPILAN KHUSUS HP
+   ========================= */
+
+@media (max-width: 700px) {
+
+  /* Halaman tidak melebar ke kanan */
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .topbar {
+    padding: 10px 15px;
+  }
+
+  /* Hero menjadi satu kolom */
+  .hero {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .hero > * {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Foto gedung */
+  .hero img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 330px;
+    object-fit: cover;
+  }
+
+  /* Isi teks beranda */
+  .hero-content {
+    padding: 30px 20px !important;
+  }
+
+  .hero-content h1 {
+    font-size: 32px !important;
+    line-height: 1.1;
+  }
+
+  /* Tombol */
+  .actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100%;
+  }
+
+  .actions .btn {
+    width: 100% !important;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  /* Semua section */
+  .section {
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 45px 15px !important;
+  }
+
+  /* Kartu layanan */
+  .cards,
+  .cards.four,
+  .cards.three,
+  .cards.six {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .card,
+  .service {
+    padding: 15px !important;
+    box-sizing: border-box;
+  }
+
+  .card h3,
+  .service h3 {
+    font-size: 14px;
+  }
+
+  .card p,
+  .service p {
+    font-size: 12px;
+  }
+
+  /* Kalender */
+  #kalender iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 500px !important;
+  }
+
+  /* Galeri */
+  .gallery-slider {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 25px;
+  }
+}
