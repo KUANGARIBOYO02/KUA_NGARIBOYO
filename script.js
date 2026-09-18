@@ -86,3 +86,79 @@ setInterval(function() {
   galleryNext();
 
 }, 4000);
+// ==========================================
+// SLIDESHOW PAMFLET INFORMASI PENTING
+// ==========================================
+
+const pamfletPhotos = [
+  "Persyaratan Nikah.png",
+  "duplikat_buku_nikah.png",
+  "wakaf(1).png",
+  "WEB KUA.png",
+  "pamflet.png"
+];
+
+let pamfletIndex = 0;
+
+function showPamflet(index) {
+
+  const image = document.getElementById("pamfletImage");
+  const zoom = document.getElementById("pamfletZoom");
+  const dots = document.getElementById("pamfletDots");
+
+  if (!image || !zoom) {
+    return;
+  }
+
+  pamfletIndex =
+    (index + pamfletPhotos.length) % pamfletPhotos.length;
+
+  image.style.opacity = "0";
+
+  setTimeout(function() {
+
+    image.src = pamfletPhotos[pamfletIndex];
+    zoom.href = pamfletPhotos[pamfletIndex];
+
+    image.style.opacity = "1";
+
+  }, 200);
+
+  if (dots) {
+
+    dots.innerHTML = "";
+
+    pamfletPhotos.forEach(function(photo, i) {
+
+      const dot = document.createElement("span");
+
+      dot.className =
+        "pamflet-dot" +
+        (i === pamfletIndex ? " active" : "");
+
+      dot.onclick = function() {
+        showPamflet(i);
+      };
+
+      dots.appendChild(dot);
+
+    });
+
+  }
+}
+
+function pamfletNext() {
+  showPamflet(pamfletIndex + 1);
+}
+
+function pamfletPrev() {
+  showPamflet(pamfletIndex - 1);
+}
+
+// Tampilkan pamflet pertama
+showPamflet(0);
+
+// Otomatis berganti setiap 5 detik
+setInterval(function() {
+  pamfletNext();
+}, 5000);
