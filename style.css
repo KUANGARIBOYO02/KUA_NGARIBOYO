@@ -893,3 +893,48 @@ textarea {
     padding-right: 12px !important;
   }
 }
+/* ==========================================
+   PERBAIKAN HERO / BERANDA
+   ========================================== */
+
+.hero {
+  position: relative !important;
+  min-height: 500px !important;
+  display: flex !important;
+  align-items: center !important;
+  background:
+    linear-gradient(90deg, rgba(246,251,247,0.92), rgba(255,255,255,0.25)),
+    url("gedung-kua.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.hero-overlay {
+  width: 100% !important;
+  padding: 70px 8% !important;
+  box-sizing: border-box !important;
+}
+
+.hero-copy {
+  max-width: 560px !important;
+}
+
+.hero-img {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto !important;
+    background-position: center !important;
+  }
+
+  .hero-overlay {
+    width: 100% !important;
+    padding: 45px 20px !important;
+  }
+
+  .hero-img {
+    display: none !important;
+  }
+}
