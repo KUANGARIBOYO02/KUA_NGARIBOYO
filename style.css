@@ -938,3 +938,7 @@ textarea {
     display: none !important;
   }
 }
+/* PERBAIKAN HERO DESKTOP */
+.hero-img {
+  display: none !important;
+}
