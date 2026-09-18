@@ -66,11 +66,9 @@ function showGalleryPhoto(index) {
   }, 250);
 }
 
-
 function galleryNext() {
   showGalleryPhoto(galleryIndex + 1);
 }
-
 
 function galleryPrev() {
   showGalleryPhoto(galleryIndex - 1);
@@ -78,14 +76,14 @@ function galleryPrev() {
 
 
 // ===============================
-// OTOMATIS SETIAP 4 DETIK
+// OTOMATIS GALERI SETIAP 4 DETIK
 // ===============================
 
 setInterval(function() {
-
   galleryNext();
-
 }, 4000);
+
+
 // ==========================================
 // SLIDESHOW PAMFLET INFORMASI PENTING
 // ==========================================
@@ -93,7 +91,7 @@ setInterval(function() {
 const pamfletPhotos = [
   "Persyaratan Nikah.png",
   "duplikat_buku_nikah.png",
-  "wakaf(1).png",
+  "wakaf.png",
   "WEB KUA.png",
   "pamflet.png"
 ];
@@ -143,7 +141,6 @@ function showPamflet(index) {
       dots.appendChild(dot);
 
     });
-
   }
 }
 
@@ -155,10 +152,18 @@ function pamfletPrev() {
   showPamflet(pamfletIndex - 1);
 }
 
-// Tampilkan pamflet pertama
+
+// ===============================
+// PAMFLET PERTAMA
+// ===============================
+
 showPamflet(0);
 
-// Otomatis berganti setiap 5 detik
+
+// ===============================
+// OTOMATIS SETIAP 5 DETIK
+// ===============================
+
 setInterval(function() {
   pamfletNext();
 }, 5000);
