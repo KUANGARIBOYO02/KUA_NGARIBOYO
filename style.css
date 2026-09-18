@@ -525,4 +525,165 @@
   .footer-map iframe {
     height: 220px;
   }
+}/* ==========================================
+   INFORMASI PENTING - PAMFLET
+   ========================================== */
+
+.info-penting {
+  background: #f1f7f3;
+  text-align: center;
+}
+
+.pamflet-slider {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pamflet-frame {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 12px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+
+.pamflet-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 780px;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: opacity 0.35s ease;
+}
+
+.pamflet-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: #006b35;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.pamflet-button:hover {
+  background: #004f26;
+}
+
+.pamflet-prev,
+.pamflet-next {
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: #006b35;
+  color: white;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  z-index: 2;
+}
+
+.pamflet-prev:hover,
+.pamflet-next:hover {
+  background: #004f26;
+}
+
+.pamflet-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.pamflet-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #b8cfc1;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pamflet-dot.active {
+  width: 25px;
+  border-radius: 10px;
+  background: #006b35;
+}
+
+.pamflet-caption {
+  margin-top: 12px;
+  color: #68786e;
+  font-size: 14px;
+}
+
+/* ==========================================
+   PAMFLET DI HP
+   ========================================== */
+
+@media (max-width: 700px) {
+
+  .info-penting {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .pamflet-slider {
+    gap: 5px;
+  }
+
+  .pamflet-frame {
+    width: calc(100% - 70px);
+    padding: 7px;
+    border-radius: 12px;
+  }
+
+  .pamflet-frame img {
+    max-height: none;
+    border-radius: 8px;
+  }
+
+  .pamflet-prev,
+  .pamflet-next {
+    width: 38px;
+    height: 38px;
+    font-size: 27px;
+  }
+
+  .pamflet-button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+}
+
+/* HP yang lebih kecil */
+@media (max-width: 520px) {
+
+  .pamflet-frame {
+    width: calc(100% - 55px);
+  }
+
+  .pamflet-prev,
+  .pamflet-next {
+    width: 32px;
+    height: 32px;
+    font-size: 23px;
+  }
 }
