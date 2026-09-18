@@ -1,88 +1,395 @@
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#173b2a;background:#fff;line-height:1.55}.topbar{position:sticky;top:0;z-index:10;background:#005b2b;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:10px 5%;box-shadow:0 2px 10px #0002}.brand{display:flex;align-items:center;gap:12px}.brand img{width:58px;height:58px;object-fit:cover;border-radius:8px}.brand strong{font-size:18px;line-height:1.05}.brand small{display:block;font-size:11px;margin-top:4px;opacity:.9}.topbar nav{display:flex;gap:18px}.topbar nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:700}.menu-btn{display:none;background:none;border:0;color:#fff;font-size:25px}.hero{min-height:500px;background:linear-gradient(90deg,#f6fbf7ee,#ffffff40),url("gedung-kua.jpg");background-size:cover;background-position:center;display:flex;align-items:center}.hero-overlay{width:100%;padding:70px 8%}.hero-copy{max-width:560px}.eyebrow{font-weight:700;margin:0}.hero h1{font-size:44px;line-height:1.05;margin:8px 0 15px;color:#005b2b}.hero-copy>p:not(.eyebrow){font-size:18px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-block;border:0;border-radius:8px;padding:13px 18px;font-weight:800;text-decoration:none;cursor:pointer}.primary{background:#006b35;color:white}.secondary{background:#fff;color:#006b35;border:1px solid #006b35}.section{padding:55px 7%;max-width:1300px;margin:auto}.section.alt{max-width:none;background:#f1f7f3}.section h2{text-align:center;font-size:30px;color:#005b2b;margin:0 0 28px}.section-head{text-align:center}.cards{display:grid;gap:18px}.cards.four{grid-template-columns:repeat(4,1fr)}.cards.three{grid-template-columns:repeat(3,1fr)}.cards.six{grid-template-columns:repeat(6,1fr)}.card,.service,.panel,article{background:#fff;border:1px solid #d9e5dd;border-radius:12px;padding:23px;box-shadow:0 5px 18px #164c2b0b}.card{text-decoration:none;color:inherit}.card>span,.service>span{font-size:35px}.card h3,.service h3{margin:8px 0}.card b{color:#006b35;font-size:13px}.service{text-align:center;text-decoration:none;color:inherit}.service h3{text-decoration:underline;text-underline-offset:4px}.form-layout{display:grid;grid-template-columns:2fr 1fr;gap:20px;max-width:1050px;margin:auto}.panel h3{color:#005b2b;margin-top:0}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:block;font-weight:700;font-size:13px;margin:12px 0}input,textarea{width:100%;padding:11px;border:1px solid #c9d8cf;border-radius:7px;margin-top:5px;font:inherit}.notice{background:#fff8df;border-left:4px solid #d7a500;padding:10px;font-size:12px}.check,.steps{padding-left:22px}.check li::marker{content:"✓  ";color:#00743b}.calendar{max-width:900px;margin:auto}.cal-head{display:flex;justify-content:space-between;align-items:center}.cal-head button{font-size:25px;background:#edf5ef;border:0;border-radius:6px;padding:5px 15px}.weekdays,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.weekdays{text-align:center;padding:10px 0}.days div{min-height:75px;border:1px solid #e2e9e4;border-radius:5px;padding:7px;font-size:13px}.days .empty{background:#f8faf9}.days .event{background:#dff2e6;border-color:#8ac6a1;font-weight:700}.news{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:auto}.tag{font-size:11px;font-weight:800;color:#00743b}.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.gallery div{height:170px;border-radius:10px;background:linear-gradient(135deg,#dfece3,#aac7b2);display:grid;place-items:center;font-weight:700;color:#31563f}.muted{text-align:center;color:#68786e;font-size:13px}.footer-grid{background:#004f26;color:white;padding:45px 7%;display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}.footer-grid img{width:65px;height:65px;object-fit:cover;border-radius:8px;float:left;margin-right:15px}.footer-grid h3{margin-top:0}.copyright{text-align:center;background:#003d1e;color:#dbece1;padding:13px;font-size:12px}@media(max-width:900px){.topbar nav{display:none;position:absolute;top:78px;left:0;right:0;background:#005b2b;padding:15px 7%;flex-direction:column}.topbar nav.open{display:flex}.menu-btn{display:block}.cards.four,.cards.six{grid-template-columns:repeat(2,1fr)}.form-layout,.news,.footer-grid{grid-template-columns:1fr}.cards.three{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:36px}}@media(max-width:520px){.cards.four,.cards.six,.gallery,.grid2{grid-template-columns:1fr}.hero{min-height:560px}.hero-overlay{padding:50px 7%}.hero h1{font-size:31px}.brand strong{font-size:15px}.brand small{display:none}}
-.gallery {
-  max-width: 750px;
-  margin: 25px auto;
+/* ==========================================
+   DASAR
+   ========================================== */
+
+* {
+  box-sizing: border-box;
 }
 
-.gallery img {
-  display: block;
-  width: 100%;
-  height: 360px;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #173b2a;
+  background: #fff;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+}
+
+
+/* ==========================================
+   HEADER / TOPBAR
+   ========================================== */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #005b2b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5%;
+  box-shadow: 0 2px 10px #0002;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  width: 58px;
+  height: 58px;
   object-fit: cover;
-  border-radius: 16px;
-}
-/* Ukuran galeri */
-.gallery {
-  display: block !important;
-  max-width: 600px !important;
-  margin: 25px auto !important;
+  border-radius: 8px;
 }
 
-.gallery a {
-  display: block !important;
+.brand strong {
+  font-size: 18px;
+  line-height: 1.05;
 }
 
-.gallery img {
-  display: block !important;
-  width: 100% !important;
-  height: 300px !important;
-  object-fit: cover !important;
-  border-radius: 12px;
-}
-/* GALERI TENGAH DAN LANDSCAPE */
-
-#galeri {
-  text-align: center;
+.brand small {
+  display: block;
+  font-size: 11px;
+  margin-top: 4px;
+  opacity: 0.9;
 }
 
-#galeri .gallery-header h2 {
-  text-align: center;
-  margin-bottom: 25px;
+.topbar nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
 }
-/* TOMBOL BERANDA TERSUSUN KE BAWAH */
+
+.topbar nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.topbar nav a:hover {
+  text-decoration: underline;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+
+/* ==========================================
+   HERO / BERANDA
+   ========================================== */
+
+.hero {
+  min-height: 500px;
+  background:
+    linear-gradient(90deg, #f6fbf7ee, #ffffff40),
+    url("gedung-kua.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  padding: 70px 8%;
+}
+
+.hero-copy {
+  max-width: 560px;
+}
+
+.eyebrow {
+  font-weight: 700;
+  margin: 0;
+}
+
+.hero h1 {
+  font-size: 44px;
+  line-height: 1.05;
+  margin: 8px 0 15px;
+  color: #005b2b;
+}
+
+.hero-copy > p:not(.eyebrow) {
+  font-size: 18px;
+}
+
 .actions {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  gap: 10px !important;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
 }
 
-.actions .btn {
-  width: fit-content !important;
-}
-#galeri .gallery {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 8px;
+  padding: 13px 18px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-#galeri .gallery a {
-  display: block;
+.primary {
+  background: #006b35;
+  color: white;
 }
 
-#galeri .gallery img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+.secondary {
+  background: #fff;
+  color: #006b35;
+  border: 1px solid #006b35;
 }
 
-#galeri .gallery-caption {
+.btn:hover {
+  opacity: 0.9;
+}
+
+
+/* ==========================================
+   SECTION
+   ========================================== */
+
+.section {
+  padding: 55px 7%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.section.alt {
+  max-width: none;
+  background: #f1f7f3;
+}
+
+.section h2 {
   text-align: center;
-  margin-top: 15px;
-  color: #666;
-  font-size: 14px;
+  font-size: 30px;
+  color: #005b2b;
+  margin: 0 0 28px;
 }
 
-@media (max-width: 600px) {
-  #galeri .gallery {
-    max-width: 95%;
-  }
+.section-head {
+  text-align: center;
 }
-/* SLIDESHOW GALERI */
+
+
+/* ==========================================
+   CARD
+   ========================================== */
+
+.cards {
+  display: grid;
+  gap: 18px;
+}
+
+.cards.four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cards.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cards.six {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.card,
+.service,
+.panel,
+article {
+  background: #fff;
+  border: 1px solid #d9e5dd;
+  border-radius: 12px;
+  padding: 23px;
+  box-shadow: 0 5px 18px #164c2b0b;
+}
+
+.card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card > span,
+.service > span {
+  font-size: 35px;
+}
+
+.card h3,
+.service h3 {
+  margin: 8px 0;
+}
+
+.card b {
+  color: #006b35;
+  font-size: 13px;
+}
+
+.service {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.service h3 {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+
+/* ==========================================
+   PENDAFTARAN / FORM
+   ========================================== */
+
+.form-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.panel h3 {
+  color: #005b2b;
+  margin-top: 0;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  margin: 12px 0;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #c9d8cf;
+  border-radius: 7px;
+  margin-top: 5px;
+  font: inherit;
+}
+
+.notice {
+  background: #fff8df;
+  border-left: 4px solid #d7a500;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.check,
+.steps {
+  padding-left: 22px;
+}
+
+.check li::marker {
+  content: "✓  ";
+  color: #00743b;
+}
+
+
+/* ==========================================
+   KALENDER
+   ========================================== */
+
+.calendar {
+  max-width: 900px;
+  margin: auto;
+}
+
+.cal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cal-head button {
+  font-size: 25px;
+  background: #edf5ef;
+  border: 0;
+  border-radius: 6px;
+  padding: 5px 15px;
+}
+
+.weekdays,
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.weekdays {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.days div {
+  min-height: 75px;
+  border: 1px solid #e2e9e4;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 13px;
+}
+
+.days .empty {
+  background: #f8faf9;
+}
+
+.days .event {
+  background: #dff2e6;
+  border-color: #8ac6a1;
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   INFORMASI & BERITA
+   ========================================== */
+
+.news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: 800;
+  color: #00743b;
+}
+
+
+/* ==========================================
+   GALERI
+   ========================================== */
 
 #galeri {
   text-align: center;
@@ -100,7 +407,7 @@
   margin: 0 auto;
   overflow: hidden;
   border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
 .gallery-slider a {
@@ -124,10 +431,11 @@
   height: 42px;
   border: none;
   border-radius: 50%;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
   color: white;
   font-size: 28px;
   cursor: pointer;
+  z-index: 2;
 }
 
 .gallery-prev {
@@ -140,7 +448,7 @@
 
 .gallery-prev:hover,
 .gallery-next:hover {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .gallery-caption {
@@ -150,382 +458,8 @@
   font-size: 14px;
 }
 
-@media (max-width: 600px) {
-  .gallery-slider {
-    max-width: 95%;
-  }
-}
-/* Warna link kontak di footer */
-.footer-grid a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer-grid a:hover {
-  text-decoration: underline;
-}
-/* =========================
-   TAMPILAN KHUSUS HP
-   ========================= */
-
-@media (max-width: 700px) {
-
-  /* Halaman tidak melebar ke kanan */
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  /* Header */
-  .topbar {
-    padding: 10px 15px;
-  }
-
-  /* Hero menjadi satu kolom */
-  .hero {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  .hero > * {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* Foto gedung */
-  .hero img {
-    width: 100% !important;
-    height: auto !important;
-    max-height: 330px;
-    object-fit: cover;
-  }
-
-  /* Isi teks beranda */
-  .hero-content {
-    padding: 30px 20px !important;
-  }
-
-  .hero-content h1 {
-    font-size: 32px !important;
-    line-height: 1.1;
-  }
-
-  /* Tombol */
-  .actions {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    width: 100%;
-  }
-
-  .actions .btn {
-    width: 100% !important;
-    box-sizing: border-box;
-    text-align: center;
-  }
-
-  /* Semua section */
-  .section {
-    width: 100% !important;
-    box-sizing: border-box;
-    padding: 45px 15px !important;
-  }
-
-  /* Kartu layanan */
-  .cards,
-  .cards.four,
-  .cards.three,
-  .cards.six {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
-  }
-
-  .card,
-  .service {
-    padding: 15px !important;
-    box-sizing: border-box;
-  }
-
-  .card h3,
-  .service h3 {
-    font-size: 14px;
-  }
-
-  .card p,
-  .service p {
-    font-size: 12px;
-  }
-
-  /* Kalender */
-  #kalender iframe {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: 500px !important;
-  }
-
-  /* Galeri */
-  .gallery-slider {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* Footer */
-  .footer-grid {
-    grid-template-columns: 1fr !important;
-    gap: 25px;
-  }
-}
 
 /* ==========================================
-   PERBAIKAN TOTAL TAMPILAN HP
-   ========================================== */
-
-@media (max-width: 700px) {
-
-  html,
-  body {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    overflow-x: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* HEADER */
-  .topbar {
-    width: 100% !important;
-    max-width: none !important;
-    box-sizing: border-box !important;
-  }
-
-  /* NAVIGASI */
-  #nav {
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* HERO MENJADI SATU KOLOM */
-  .hero {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    width: 100% !important;
-    max-width: none !important;
-    min-width: 0 !important;
-  }
-
-  .hero > * {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  /* TEKS BERANDA */
-  .hero-content {
-    width: 100% !important;
-    box-sizing: border-box !important;
-    padding: 30px 20px !important;
-  }
-
-  .hero-content h1 {
-    font-size: 30px !important;
-    line-height: 1.1 !important;
-  }
-
-  /* FOTO GEDUNG */
-  .hero img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    max-height: 350px !important;
-    object-fit: cover !important;
-  }
-
-  /* SEMUA SECTION */
-  main {
-    width: 100% !important;
-    max-width: none !important;
-    min-width: 0 !important;
-  }
-
-  .section {
-    width: 100% !important;
-    max-width: none !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-    padding: 40px 15px !important;
-    margin: 0 !important;
-  }
-
-  /* JUDUL */
-  .section h2 {
-    text-align: center !important;
-  }
-
-  /* LAYANAN KAMI */
-  .cards,
-  .cards.four,
-  .cards.three,
-  .cards.six {
-    width: 100% !important;
-    max-width: none !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    box-sizing: border-box !important;
-  }
-
-  .card,
-  .service {
-    min-width: 0 !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* PENDAFTARAN NIKAH */
-  .panel-grid,
-  .two,
-  .three {
-    width: 100% !important;
-    max-width: none !important;
-    grid-template-columns: 1fr !important;
-    box-sizing: border-box !important;
-  }
-
-  /* KALENDER */
-  #kalender iframe {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* GALERI */
-  .gallery-slider {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* FOOTER */
-  footer {
-    width: 100% !important;
-    max-width: none !important;
-    box-sizing: border-box !important;
-  }
-
-  .footer-grid {
-    width: 100% !important;
-    grid-template-columns: 1fr !important;
-    box-sizing: border-box !important;
-  }
-}
-/* PERBAIKAN TAMPILAN HP */
-@media (max-width: 900px) {
-
-  .hero {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    width: 100% !important;
-    min-height: auto !important;
-  }
-
-  .hero-overlay {
-    width: 100% !important;
-    padding: 40px 20px !important;
-    box-sizing: border-box !important;
-  }
-
-  .hero-copy {
-    width: 100% !important;
-    max-width: 600px !important;
-    margin: auto !important;
-  }
-
-  .hero h1 {
-    font-size: 32px !important;
-    line-height: 1.1 !important;
-  }
-
-  .hero-copy > p:not(.eyebrow) {
-    font-size: 16px !important;
-  }
-
-  .hero-img {
-    display: block !important;
-    width: 100% !important;
-    height: 300px !important;
-    object-fit: cover !important;
-    object-position: center !important;
-  }
-
-  .actions {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 10px !important;
-  }
-
-  .actions .btn {
-    width: 100% !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
-  }
-
-  .section {
-    width: 100% !important;
-    max-width: none !important;
-    padding: 40px 15px !important;
-    box-sizing: border-box !important;
-  }
-
-  .cards.four,
-  .cards.six {
-    grid-template-columns: repeat(2, 1fr) !important;
-    width: 100% !important;
-  }
-
-  .form-layout {
-    grid-template-columns: 1fr !important;
-  }
-
-  .news {
-    grid-template-columns: 1fr !important;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-/* GOOGLE MAPS DI FOOTER */
-
-.footer-map {
-  width: 100%;
-  max-width: 450px;
-  margin-top: 18px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.20);
-}
-
-.footer-map iframe {
-  display: block;
-  width: 100%;
-  height: 220px;
-  border: 0;
-}
-
-/* Tampilan HP */
-@media (max-width: 900px) {
-  .footer-map {
-    max-width: 100%;
-  }
-
-  .footer-map iframe {
-    height: 220px;
-  }
-}/* ==========================================
    INFORMASI PENTING - PAMFLET
    ========================================== */
 
@@ -552,7 +486,7 @@
   background: white;
   padding: 12px;
   border-radius: 18px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
   overflow: hidden;
 }
 
@@ -594,7 +528,7 @@
   font-size: 32px;
   line-height: 1;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
   z-index: 2;
 }
 
@@ -631,6 +565,240 @@
   color: #68786e;
   font-size: 14px;
 }
+
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.footer-grid {
+  background: #004f26;
+  color: white;
+  padding: 45px 7%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 30px;
+}
+
+.footer-grid img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 8px;
+  float: left;
+  margin-right: 15px;
+}
+
+.footer-grid h3 {
+  margin-top: 0;
+}
+
+.footer-grid a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-grid a:hover {
+  text-decoration: underline;
+}
+
+.footer-map {
+  width: 100%;
+  max-width: 450px;
+  margin-top: 18px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.20);
+}
+
+.footer-map iframe {
+  display: block;
+  width: 100%;
+  height: 220px;
+  border: 0;
+}
+
+.copyright {
+  text-align: center;
+  background: #003d1e;
+  color: #dbece1;
+  padding: 13px;
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   TEKS TAMBAHAN
+   ========================================== */
+
+.muted {
+  text-align: center;
+  color: #68786e;
+  font-size: 13px;
+}
+
+
+/* ==========================================
+   TABLET / HP
+   ========================================== */
+
+@media (max-width: 900px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  .topbar nav {
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+    background: #005b2b;
+    padding: 15px 7%;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .topbar nav.open {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    min-height: auto !important;
+  }
+
+  .hero-overlay {
+    width: 100% !important;
+    padding: 40px 20px !important;
+  }
+
+  .hero-copy {
+    width: 100% !important;
+    max-width: 600px !important;
+    margin: auto !important;
+  }
+
+  .hero h1 {
+    font-size: 32px !important;
+    line-height: 1.1 !important;
+  }
+
+  .hero-copy > p:not(.eyebrow) {
+    font-size: 16px;
+  }
+
+  .actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+
+  .actions .btn {
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .section {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    padding: 40px 15px !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+  }
+
+  .section h2 {
+    text-align: center !important;
+  }
+
+  .cards.four,
+  .cards.six {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100% !important;
+  }
+
+  .cards.three {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .service {
+    min-width: 0;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .card h3,
+  .service h3 {
+    font-size: 14px;
+  }
+
+  .card p,
+  .service p {
+    font-size: 12px;
+  }
+
+  .form-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .news {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    box-sizing: border-box;
+  }
+
+  #kalender iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 500px !important;
+    box-sizing: border-box;
+  }
+
+  .gallery-slider {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .footer-map {
+    max-width: 100%;
+  }
+
+  .footer-map iframe {
+    height: 220px;
+  }
+
+  .pamflet-frame {
+    max-width: 600px;
+  }
+}
+
 
 /* ==========================================
    PAMFLET DI HP
@@ -671,10 +839,39 @@
     padding: 9px 12px;
     font-size: 13px;
   }
+
+  .gallery-slider {
+    max-width: 100%;
+  }
+
+  .brand strong {
+    font-size: 15px;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .hero-overlay {
+    padding: 40px 20px !important;
+  }
 }
 
-/* HP yang lebih kecil */
+
+/* ==========================================
+   HP KECIL
+   ========================================== */
+
 @media (max-width: 520px) {
+
+  .cards.four,
+  .cards.six {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
 
   .pamflet-frame {
     width: calc(100% - 55px);
@@ -685,5 +882,14 @@
     width: 32px;
     height: 32px;
     font-size: 23px;
+  }
+
+  .hero h1 {
+    font-size: 30px !important;
+  }
+
+  .section {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
   }
 }
