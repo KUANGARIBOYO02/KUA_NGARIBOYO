@@ -1789,3 +1789,154 @@ textarea {
   }
 }
 }
+/* =====================================================
+   INSTAGRAM + INFORMASI & BERITA
+   DUA KOLOM
+   ===================================================== */
+
+.social-news-section {
+  width: 100% !important;
+  max-width: 1300px !important;
+  margin: 0 auto !important;
+  padding: 50px 5% !important;
+  background: #f1f7f3 !important;
+}
+
+.social-news-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 25px;
+  align-items: start;
+}
+
+.social-news-card {
+  background: #fff;
+  border: 1px solid #d9e5dd;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 5px 18px rgba(22,76,43,0.08);
+  min-width: 0;
+}
+
+.social-news-card .section-head h2 {
+  font-size: 26px !important;
+  margin-bottom: 8px !important;
+}
+
+.social-news-card .section-head p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* INSTAGRAM */
+.instagram-card {
+  overflow: hidden;
+}
+
+.instagram-widget {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.instagram-widget .sk-instagram-feed {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* TOMBOL INSTAGRAM */
+.instagram-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 20px;
+  background: #d6a928;
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: .2s ease;
+}
+
+.instagram-button:hover {
+  background: #b88c16;
+  transform: translateY(-1px);
+}
+
+/* BERITA */
+.news-card .news {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.news-card article {
+  padding: 18px !important;
+  margin: 0;
+}
+
+.news-card article h3 {
+  margin: 8px 0;
+  color: #005b2b;
+  font-size: 18px;
+}
+
+.news-card article p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.news-card .tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  color: #005b2b;
+  background: #e7f2eb;
+  padding: 4px 9px;
+  border-radius: 12px;
+}
+
+
+/* =====================================================
+   HP / TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+  .social-news-section {
+    padding: 40px 15px !important;
+  }
+
+  .social-news-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .social-news-card {
+    padding: 20px;
+  }
+
+}
+
+
+/* HP KECIL */
+
+@media (max-width: 600px) {
+
+  .social-news-section {
+    padding: 35px 12px !important;
+  }
+
+  .social-news-card {
+    padding: 16px;
+    border-radius: 13px;
+  }
+
+  .social-news-card .section-head h2 {
+    font-size: 23px !important;
+  }
+
+}
