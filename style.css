@@ -942,3 +942,32 @@ textarea {
 .hero-img {
   display: none !important;
 }
+/* JUMLAH PENGUNJUNG */
+.visitor-counter {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  background: #005b2a !important;
+  color: white !important;
+  text-align: center !important;
+  padding: 15px 10px !important;
+  margin: 0 !important;
+  border: 0 !important;
+}
+
+.visitor-counter > div {
+  font-size: 14px !important;
+  margin-bottom: 4px !important;
+  color: white !important;
+}
+
+.visitor-counter > strong {
+  display: block !important;
+  font-size: 26px !important;
+  line-height: 1.2 !important;
+  color: white !important;
+  font-weight: 700 !important;
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
