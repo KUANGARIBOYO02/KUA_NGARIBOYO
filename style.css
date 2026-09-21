@@ -1442,3 +1442,21 @@ textarea {
   }
 
 }
+/* Tombol lihat profil pegawai */
+.profil-more-btn {
+  display: inline-block;
+  margin: 0 auto 20px;
+  padding: 9px 20px;
+  background: #005b2b;
+  color: #fff !important;
+  text-decoration: none !important;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 25px;
+  transition: 0.2s ease;
+}
+
+.profil-more-btn:hover {
+  background: #0a7a3b;
+  transform: translateY(-1px);
+}
