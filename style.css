@@ -1949,3 +1949,27 @@ textarea {
   }
 
 }
+/* FIX FINAL INSTAGRAM + BERITA */
+@media (min-width: 701px) {
+  section.social-news-section .social-news-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 30px !important;
+    width: 100% !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+  }
+
+  section.social-news-section .social-news-card {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
+@media (max-width: 700px) {
+  section.social-news-section .social-news-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
