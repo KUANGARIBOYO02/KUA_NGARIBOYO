@@ -1461,3 +1461,189 @@ textarea {
   background: #b88c16;
   transform: translateY(-1px);
 }
+/* =====================================================
+   HEADER MENU - MODEL BARU
+   ===================================================== */
+
+.topbar {
+  padding: 8px 4% !important;
+  min-height: 48px;
+}
+
+/* MENU UTAMA */
+.topbar nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* IKON RUMAH */
+.nav-home {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 32px;
+}
+
+.nav-home svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+  display: block;
+}
+
+/* LINK MENU */
+.topbar nav a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* GARIS AKTIF / HOVER */
+.topbar nav > a:hover,
+.nav-dropdown > a:hover {
+  color: #fff;
+}
+
+.topbar nav > a::after,
+.nav-dropdown > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+  width: 0;
+  height: 3px;
+  background: #f2c94c;
+  border-radius: 3px;
+  transition: width 0.2s ease;
+}
+
+.topbar nav > a:hover::after,
+.nav-dropdown > a:hover::after {
+  width: 100%;
+}
+
+/* DROPDOWN */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-link {
+  display: flex !important;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-link span {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* ISI DROPDOWN */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 0;
+  min-width: 210px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+  padding: 8px 0;
+  display: none;
+  z-index: 2000;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block !important;
+  padding: 10px 16px;
+  color: #17452f !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+.dropdown-menu a::after {
+  display: none !important;
+}
+
+.dropdown-menu a:hover {
+  background: #f1f7f3;
+  color: #005b2b !important;
+}
+
+/* TOMBOL WHATSAPP */
+.nav-whatsapp {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  background: #f2c94c !important;
+  color: #173b2a !important;
+
+  padding: 9px 16px;
+  border-radius: 6px;
+
+  font-size: 13px !important;
+  font-weight: 800 !important;
+
+  box-shadow: 0 2px 7px rgba(0,0,0,0.12);
+}
+
+.nav-whatsapp::after {
+  display: none !important;
+}
+
+.nav-whatsapp:hover {
+  background: #e5b936 !important;
+  color: #173b2a !important;
+}
+
+.wa-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+@media (max-width: 900px) {
+
+  .topbar {
+    padding: 8px 15px !important;
+  }
+
+  .topbar nav {
+    gap: 14px;
+  }
+
+  .nav-home {
+    width: auto;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    margin-top: 5px;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dropdown-link {
+    justify-content: center;
+  }
+
+  .nav-whatsapp {
+    width: 100%;
+  }
+}
