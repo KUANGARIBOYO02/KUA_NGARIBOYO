@@ -30,22 +30,58 @@
   </div>
   <button class="menu-btn" onclick="toggleMenu()">☰</button>
   <nav id="nav">
-    <a href="#beranda">Beranda</a>
-    <a href="#daftar">Pendaftaran Nikah</a>
-    <a href="#kalender">Kalender Nikah</a>
-    <a href="#layanan">Layanan</a>
-    <a href="profil.html">Profil Pegawai</a>
-    <a href="#informasi">Informasi</a>
-    <a href="#galeri">Galeri</a>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLz4ue5VqMhU5li6f3cSjL6Q23aQDghRnEpui4ShQG2UJ1HA/viewform?usp=publish-editor"
-   target="_blank"
-   rel="noopener noreferrer">
-  Buku Tamu Online
-</a>
-    
-    <a href="#kontak">Kontak</a>
-  </nav>
+  <!-- BERANDA -->
+  <a href="#beranda" class="nav-home" aria-label="Beranda">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3 10.5L12 3l9 7.5v9a1.5 1.5 0 0 1-1.5 1.5h-5v-6h-5v6h-5A1.5 1.5 0 0 1 3 19.5v-9z"/>
+    </svg>
+  </a>
+
+  <a href="#beranda">Beranda</a>
+
+  <!-- PROFIL -->
+  <div class="nav-dropdown">
+    <a href="profil.html" class="dropdown-link">
+      Profil <span>⌄</span>
+    </a>
+
+    <div class="dropdown-menu">
+      <a href="profil.html">Profil Pegawai</a>
+    </div>
+  </div>
+
+  <!-- LAYANAN -->
+  <div class="nav-dropdown">
+    <a href="#layanan" class="dropdown-link">
+      Layanan KUA <span>⌄</span>
+    </a>
+
+    <div class="dropdown-menu">
+      <a href="#daftar">Pendaftaran Nikah</a>
+      <a href="#kalender">Kalender Nikah</a>
+      <a href="#persyaratan">Persyaratan</a>
+      <a href="#layanan">Semua Layanan</a>
+    </div>
+  </div>
+
+  <!-- INFORMASI -->
+  <a href="#informasi">Informasi &amp; Berita</a>
+
+  <!-- GALERI -->
+  <a href="#galeri">Galeri</a>
+
+  <!-- WHATSAPP -->
+  <a
+    href="https://wa.me/6285196955153"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="nav-whatsapp">
+    <span class="wa-icon">◉</span>
+    Layanan WhatsApp
+  </a>
+
+</nav>
 </header>
 
 <main>
