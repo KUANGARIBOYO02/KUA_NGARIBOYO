@@ -971,3 +971,144 @@ textarea {
   padding: 0 !important;
   margin: 0 !important;
 }
+/* ==========================================
+   PROFIL KEPALA KUA + LAYANAN BERANDA
+   ========================================== */
+
+.home-info {
+  display: grid;
+  grid-template-columns: 0.85fr 1.5fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* PROFIL KEPALA KUA */
+
+.kepala-kua-card {
+  background: #f1f7f3;
+  border: 1px solid #d9e5dd;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 5px 18px #164c2b0b;
+}
+
+.kepala-kua-card h2,
+.layanan-home h2 {
+  text-align: center;
+  color: #005b2b;
+  font-size: 27px;
+  margin: 0 0 22px;
+}
+
+.kepala-kua-content {
+  text-align: center;
+}
+
+.kepala-kua-photo {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 20px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.kepala-kua-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.kepala-kua-text h3 {
+  color: #005b2b;
+  font-size: 22px;
+  margin: 8px 0 4px;
+}
+
+.kepala-kua-text .jabatan {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #444;
+}
+
+.kepala-line {
+  width: 80px;
+  height: 3px;
+  background: #d6a928;
+  margin: 15px auto;
+  border-radius: 10px;
+}
+
+.kepala-kua-text .sambutan {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+/* LAYANAN */
+
+.layanan-home {
+  min-width: 0;
+}
+
+.layanan-home .cards.four {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.layanan-home .card {
+  min-height: 205px;
+}
+
+
+/* ==========================================
+   MOBILE
+   Kepala KUA tampil lebih dahulu
+   ========================================== */
+
+@media (max-width: 900px) {
+
+  .home-info {
+    grid-template-columns: 1fr !important;
+    gap: 25px;
+  }
+
+  .kepala-kua-card {
+    order: 1;
+  }
+
+  .layanan-home {
+    order: 2;
+  }
+
+  .kepala-kua-photo {
+    max-width: 270px;
+  }
+
+  .layanan-home .cards.four {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .kepala-kua-card {
+    padding: 22px 15px;
+  }
+
+  .kepala-kua-card h2,
+  .layanan-home h2 {
+    font-size: 25px;
+  }
+
+  .kepala-kua-text h3 {
+    font-size: 19px;
+  }
+
+  .layanan-home .cards.four {
+    grid-template-columns: 1fr !important;
+  }
+
+}
