@@ -1863,3 +1863,53 @@ textarea {
     gap: 20px !important;
   }
 }
+/* =====================================================
+   FIX TERAKHIR - INSTAGRAM & INFORMASI BERITA SEJAJAR
+   ===================================================== */
+
+section.social-news-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 50px 5% !important;
+    box-sizing: border-box !important;
+}
+
+section.social-news-section > .social-news-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    width: 100% !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    gap: 30px !important;
+    align-items: start !important;
+}
+
+section.social-news-section > .social-news-grid > .social-news-card {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Instagram */
+section.social-news-section .instagram-card {
+    grid-column: 1 !important;
+}
+
+/* Informasi & Berita */
+section.social-news-section .news-card {
+    grid-column: 2 !important;
+}
+
+/* HP tetap satu kolom */
+@media (max-width: 700px) {
+    section.social-news-section > .social-news-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    section.social-news-section .instagram-card,
+    section.social-news-section .news-card {
+        grid-column: 1 !important;
+    }
+}
