@@ -1191,3 +1191,92 @@ textarea {
     gap: 12px !important;
   }
 }
+/* ==========================================
+   PERBAIKAN INFORMASI PENTING
+   ========================================== */
+
+.info-penting {
+  max-width: 1300px !important;
+  margin: 0 auto !important;
+  padding: 45px 7% !important;
+  background: #f1f7f3 !important;
+  text-align: center;
+}
+
+.info-penting .section-head h2 {
+  font-size: 30px !important;
+  margin-bottom: 8px !important;
+}
+
+.info-penting .section-head p {
+  margin-top: 0 !important;
+  margin-bottom: 22px !important;
+}
+
+/* Ukuran area slider */
+.info-penting .pamflet-slider {
+  max-width: 500px !important;
+  margin: 0 auto !important;
+  gap: 12px !important;
+}
+
+/* Bingkai pamflet */
+.info-penting .pamflet-frame {
+  max-width: 420px !important;
+  padding: 10px !important;
+  border-radius: 14px !important;
+}
+
+/* Foto pamflet */
+.info-penting .pamflet-frame img {
+  width: 100% !important;
+  max-height: 560px !important;
+  object-fit: contain !important;
+  border-radius: 9px !important;
+}
+
+/* Tombol */
+.info-penting .pamflet-button {
+  margin-top: 10px !important;
+  padding: 8px 16px !important;
+  font-size: 13px !important;
+}
+
+/* Tombol kiri kanan */
+.info-penting .pamflet-prev,
+.info-penting .pamflet-next {
+  width: 38px !important;
+  height: 38px !important;
+  font-size: 27px !important;
+}
+
+/* Titik slider */
+.info-penting .pamflet-dots {
+  margin-top: 14px !important;
+}
+
+.info-penting .pamflet-caption {
+  margin-top: 10px !important;
+  font-size: 12px !important;
+}
+
+
+/* HP */
+@media (max-width: 700px) {
+
+  .info-penting {
+    padding: 35px 12px !important;
+  }
+
+  .info-penting .pamflet-slider {
+    max-width: 100% !important;
+  }
+
+  .info-penting .pamflet-frame {
+    max-width: 360px !important;
+  }
+
+  .info-penting .pamflet-frame img {
+    max-height: none !important;
+  }
+}
