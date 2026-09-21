@@ -1280,3 +1280,165 @@ textarea {
     max-height: none !important;
   }
 }
+/* =====================================================
+   HALAMAN PROFIL PEGAWAI
+   ===================================================== */
+
+/* Judul halaman */
+.profil-pegawai-header {
+  text-align: center;
+  padding: 45px 20px 25px;
+}
+
+.profil-pegawai-header h1 {
+  margin: 0;
+  color: #005b2b;
+  font-size: 34px;
+}
+
+.profil-pegawai-header p {
+  margin: 6px 0 0;
+  color: #68786e;
+}
+
+
+/* =====================================================
+   KEPALA KUA
+   ===================================================== */
+
+.profil-kepala-section {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 5% 45px;
+  text-align: center;
+}
+
+.profil-kepala-section h2,
+.profil-staff-section h2 {
+  color: #005b2b;
+  font-size: 28px;
+  margin: 0 0 25px;
+}
+
+.profil-kepala-card {
+  width: 320px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+
+  background: #fff;
+  border: 1px solid #d9e5dd;
+  border-radius: 16px;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+
+  overflow: hidden;
+}
+
+.profil-kepala-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+/* =====================================================
+   DAFTAR PEGAWAI
+   ===================================================== */
+
+.profil-staff-section {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 25px 5% 60px;
+  text-align: center;
+}
+
+.profil-staff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.profil-staff-card {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #d9e5dd;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+  overflow: hidden;
+}
+
+.profil-staff-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+  .profil-pegawai-header {
+    padding: 35px 15px 20px;
+  }
+
+  .profil-pegawai-header h1 {
+    font-size: 30px;
+  }
+
+  .profil-kepala-section,
+  .profil-staff-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .profil-staff-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+}
+
+
+/* =====================================================
+   HP
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  .profil-pegawai-header {
+    padding: 30px 12px 15px;
+  }
+
+  .profil-pegawai-header h1 {
+    font-size: 27px;
+  }
+
+  .profil-pegawai-header p {
+    font-size: 14px;
+  }
+
+  .profil-kepala-section h2,
+  .profil-staff-section h2 {
+    font-size: 23px;
+  }
+
+  .profil-kepala-card {
+    width: 280px;
+  }
+
+  .profil-staff-grid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    gap: 20px;
+  }
+
+}
