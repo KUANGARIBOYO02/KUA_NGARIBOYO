@@ -1795,10 +1795,20 @@ textarea {
 
 .social-news-section {
   width: 100% !important;
-  max-width: 1300px !important;
-  margin: 0 auto !important;
+  max-width: none !important;
+  margin: 0 !important;
   padding: 50px 5% !important;
   background: #f1f7f3 !important;
+}
+
+.social-news-grid {
+  width: 100% !important;
+  max-width: 1300px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 25px !important;
+  align-items: start;
 }
 
 .social-news-grid {
