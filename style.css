@@ -971,144 +971,223 @@ textarea {
   padding: 0 !important;
   margin: 0 !important;
 }
-/* ==========================================
-   PROFIL KEPALA KUA + LAYANAN BERANDA
-   ========================================== */
+/* =====================================================
+   PROFIL KEPALA KUA + LAYANAN KAMI
+   DESKTOP FINAL
+   ===================================================== */
 
 .home-info {
-  display: grid;
-  grid-template-columns: 0.85fr 1.5fr;
-  gap: 30px;
-  align-items: stretch;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+
+  padding: 45px 5% !important;
+
+  display: grid !important;
+  grid-template-columns: 380px minmax(0, 1fr) !important;
+  gap: 45px !important;
+
+  align-items: start !important;
 }
 
-/* PROFIL KEPALA KUA */
+
+/* ================================
+   PROFIL KEPALA KUA
+   ================================ */
 
 .kepala-kua-card {
+  width: 100% !important;
+  padding: 24px !important;
+
   background: #f1f7f3;
   border: 1px solid #d9e5dd;
   border-radius: 16px;
-  padding: 28px;
-  box-shadow: 0 5px 18px #164c2b0b;
+
+  box-shadow: 0 5px 18px rgba(22,76,43,0.08);
+
+  text-align: center;
 }
 
-.kepala-kua-card h2,
-.layanan-home h2 {
-  text-align: center;
+.kepala-kua-card h2 {
+  margin: 0 0 20px !important;
+
   color: #005b2b;
-  font-size: 27px;
-  margin: 0 0 22px;
+  font-size: 26px !important;
 }
 
-.kepala-kua-content {
-  text-align: center;
-}
+
+/* FOTO */
 
 .kepala-kua-photo {
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto 20px;
+  width: 100% !important;
+  max-width: 280px !important;
+
+  margin: 0 auto 18px !important;
+
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.16);
 }
 
 .kepala-kua-photo img {
   display: block;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+
+  width: 100% !important;
+  height: auto !important;
+
+  aspect-ratio: 4 / 5 !important;
+  object-fit: cover !important;
 }
 
+
+/* NAMA */
+
 .kepala-kua-text h3 {
+  margin: 10px 0 4px !important;
+
   color: #005b2b;
-  font-size: 22px;
-  margin: 8px 0 4px;
+  font-size: 21px !important;
+  line-height: 1.25;
 }
 
 .kepala-kua-text .jabatan {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 700;
+  margin: 0 !important;
+
   color: #444;
+  font-size: 14px !important;
+  font-weight: 700;
 }
 
 .kepala-line {
-  width: 80px;
+  width: 75px;
   height: 3px;
+
+  margin: 13px auto !important;
+
   background: #d6a928;
-  margin: 15px auto;
   border-radius: 10px;
 }
 
 .kepala-kua-text .sambutan {
-  font-size: 14px;
+  margin: 0 !important;
+
   color: #555;
-  margin: 0;
+  font-size: 13px !important;
+  line-height: 1.5;
 }
 
-/* LAYANAN */
+
+/* ================================
+   LAYANAN KAMI
+   ================================ */
 
 .layanan-home {
-  min-width: 0;
+  width: 100% !important;
+  min-width: 0 !important;
 }
 
+.layanan-home h2 {
+  margin: 0 0 22px !important;
+
+  color: #005b2b;
+  font-size: 30px !important;
+
+  text-align: center;
+}
+
+
+/* 4 KARTU */
+
 .layanan-home .cards.four {
-  grid-template-columns: repeat(2, 1fr);
+  width: 100% !important;
+
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr)) !important;
+
+  gap: 20px !important;
 }
 
 .layanan-home .card {
-  min-height: 205px;
+  width: 100% !important;
+  min-height: 210px;
+
+  padding: 23px !important;
 }
 
 
-/* ==========================================
-   MOBILE
-   Kepala KUA tampil lebih dahulu
-   ========================================== */
+/* =====================================================
+   TABLET / HP
+   ===================================================== */
 
 @media (max-width: 900px) {
 
   .home-info {
-    grid-template-columns: 1fr !important;
-    gap: 25px;
+    width: 100% !important;
+    max-width: none !important;
+
+    padding: 35px 15px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 25px !important;
   }
+
+
+  /* Kepala tetap paling atas */
 
   .kepala-kua-card {
-    order: 1;
+    order: 1 !important;
   }
+
+  /* Layanan di bawah */
 
   .layanan-home {
-    order: 2;
+    order: 2 !important;
   }
+
 
   .kepala-kua-photo {
-    max-width: 270px;
+    max-width: 280px !important;
   }
+
 
   .layanan-home .cards.four {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) !important;
   }
-
 }
+
+
+/* =====================================================
+   HP KECIL
+   ===================================================== */
 
 @media (max-width: 600px) {
 
-  .kepala-kua-card {
-    padding: 22px 15px;
+  .home-info {
+    padding: 30px 12px !important;
   }
 
-  .kepala-kua-card h2,
-  .layanan-home h2 {
-    font-size: 25px;
+  .kepala-kua-card {
+    padding: 20px 15px !important;
+  }
+
+  .kepala-kua-card h2 {
+    font-size: 24px !important;
   }
 
   .kepala-kua-text h3 {
-    font-size: 19px;
+    font-size: 19px !important;
   }
 
   .layanan-home .cards.four {
-    grid-template-columns: 1fr !important;
-  }
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) !important;
 
+    gap: 12px !important;
+  }
 }
