@@ -329,9 +329,19 @@
 
 <div class="visitor-counter">
   <div>👥 Jumlah Pengunjung Website</div>
-  <strong id="visitor-count"></strong>
+  <strong id="visitor-count">-</strong>
 </div>
-<div class="copyright">© <span id="year"></span> KUA Kecamatan Ngariboyo. Semua hak dilindungi.</div>
-</footer>
-<script src="script.js?v=2"></script>
-</body></html>
+
+<script>
+  var visitorTimer = setInterval(function () {
+    if (window.goatcounter && window.goatcounter.visit_count) {
+      clearInterval(visitorTimer);
+
+      window.goatcounter.visit_count({
+        append: '#visitor-count',
+        path: 'TOTAL',
+        no_branding: true
+      });
+    }
+  }, 100);
+</script>
