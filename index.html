@@ -21,6 +21,21 @@
 <script data-goatcounter="https://kuangariboyo.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
+
+<style>
+.info-survei-section{width:100%;box-sizing:border-box}
+.info-survei-grid{width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);gap:30px;align-items:stretch}
+.info-survei-card{min-width:0;box-sizing:border-box;border-radius:18px}
+.info-survei-card .section-head{text-align:center}
+.survei-kepuasan-card{background:#f7fbf8;padding:30px;display:flex;flex-direction:column;justify-content:center;border:1px solid rgba(0,90,50,.10)}
+.survei-kepuasan-content{text-align:center;padding:25px 15px 15px}
+.survei-icon{font-size:52px;margin-bottom:12px}
+.survei-kepuasan-content h3{margin:0 auto 15px;max-width:450px;font-size:23px;line-height:1.35}
+.survei-kepuasan-content p{max-width:500px;margin:0 auto 25px;line-height:1.7}
+.survei-button{display:inline-block;padding:13px 24px;border-radius:10px;background:#d4a017;color:#fff!important;text-decoration:none!important;font-weight:700;transition:transform .2s ease,opacity .2s ease}
+.survei-button:hover{transform:translateY(-2px);opacity:.92}
+@media(max-width:900px){.info-survei-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <header class="topbar">
@@ -192,44 +207,41 @@
   </div>
 
 </section>
-  <!-- INFORMASI PENTING -->
-<section id="informasi-penting" class="section info-penting">
+  <!-- INFORMASI PENTING + SURVEI KEPUASAN -->
+<section class="section info-survei-section">
+  <div class="info-survei-grid">
 
-  <div class="section-head">
-    <h2>📢 Informasi Penting</h2>
-    <p>Informasi layanan KUA Kecamatan Ngariboyo untuk masyarakat.</p>
-  </div>
-
-  <div class="pamflet-slider">
-
-    <button class="pamflet-prev" onclick="pamfletPrev()">‹</button>
-
-    <div class="pamflet-frame">
-      <img
-        id="pamfletImage"
-        src="Persyaratan Nikah.png"
-        alt="Informasi layanan KUA Kecamatan Ngariboyo">
-
-      <a
-        id="pamfletZoom"
-        href="Persyaratan Nikah.png"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="pamflet-button">
-        🔍 Lihat Pamflet
-      </a>
+    <div class="info-survei-card info-penting">
+      <div class="section-head">
+        <h2>📢 Informasi Penting</h2>
+        <p>Informasi layanan KUA Kecamatan Ngariboyo untuk masyarakat.</p>
+      </div>
+      <div class="pamflet-slider">
+        <button class="pamflet-prev" onclick="pamfletPrev()">‹</button>
+        <div class="pamflet-frame">
+          <img id="pamfletImage" src="Persyaratan Nikah.png" alt="Informasi layanan KUA Kecamatan Ngariboyo">
+          <a id="pamfletZoom" href="Persyaratan Nikah.png" target="_blank" rel="noopener noreferrer" class="pamflet-button">🔍 Lihat Pamflet</a>
+        </div>
+        <button class="pamflet-next" onclick="pamfletNext()">›</button>
+      </div>
+      <div class="pamflet-dots" id="pamfletDots"></div>
+      <p class="pamflet-caption">Geser atau gunakan tombol untuk melihat informasi lainnya.</p>
     </div>
 
-    <button class="pamflet-next" onclick="pamfletNext()">›</button>
+    <div class="info-survei-card survei-kepuasan-card">
+      <div class="section-head">
+        <h2>📝 Survei Kepuasan Masyarakat</h2>
+        <p>Bantu kami meningkatkan kualitas pelayanan KUA Kecamatan Ngariboyo.</p>
+      </div>
+      <div class="survei-kepuasan-content">
+        <div class="survei-icon">⭐</div>
+        <h3>Bagaimana pengalaman Anda mendapatkan pelayanan kami?</h3>
+        <p>Silakan isi Survei Kepuasan Masyarakat. Masukan Anda sangat membantu kami dalam meningkatkan kualitas pelayanan KUA Kecamatan Ngariboyo.</p>
+        <a class="survei-button" href="https://docs.google.com/forms/d/e/1FAIpQLSe9x_BmOa2xotB_aCH4w6v5SdQA-DqWN9gHofPEmgc6pU6Y7g/viewform?usp=header" target="_blank" rel="noopener noreferrer">📝 Isi Survei Kepuasan</a>
+      </div>
+    </div>
 
   </div>
-
-  <div class="pamflet-dots" id="pamfletDots"></div>
-
-  <p class="pamflet-caption">
-    Geser atau gunakan tombol untuk melihat informasi lainnya.
-  </p>
-
 </section>
 
 <section id="daftar" class="section alt">
